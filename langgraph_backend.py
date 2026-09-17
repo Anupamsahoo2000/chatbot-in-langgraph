@@ -9,7 +9,7 @@ from langgraph.graph.message import add_messages
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.7-flash")
+llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash")
 
 
 class ChatState(TypedDict):
