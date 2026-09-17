@@ -3,13 +3,15 @@ from typing import Annotated, TypedDict
 from dotenv import load_dotenv
 from langchain_core.messages import BaseMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openrouter import ChatOpenRouter
 from langgraph.checkpoint.memory import InMemorySaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 
 load_dotenv()
 
-llm = ChatGoogleGenerativeAI(model="gemini-3.6-flash")
+# llm = ChatGoogleGenerativeAI(model="gemini-3.8-flash")
+llm = ChatOpenRouter(model="openrouter/free", temperature=0)
 
 
 class ChatState(TypedDict):

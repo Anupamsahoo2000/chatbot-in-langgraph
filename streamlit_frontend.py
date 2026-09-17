@@ -30,7 +30,7 @@ if user_input:
         config=CONFIG,  # type: ignore
     )
 
-    ai_message = response["messages"][-1].content[0]["text"]
+    ai_message = response["messages"][-1].content
     # first add the message to message_history
     st.session_state["message_history"].append(
         {"role": "assistant", "content": ai_message}
