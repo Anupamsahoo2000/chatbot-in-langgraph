@@ -5,7 +5,7 @@ from langchain_core.messages import HumanMessage
 
 from langgraph_database_backend import chatbot, retrieve_all_threads
 
-# **************************************** utility functions *************************
+# **************************************** utility functions **********************
 
 
 def generate_thread_id():
